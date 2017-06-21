@@ -163,3 +163,6 @@ gem 'transit-ruby', '~> 0.8.1'
 gem 'redcarpet', '~> 3.4.0'
 
 gem 'intercom'
+
+# Additional gem
+gem 'daemons', '~> 1.2.4'
