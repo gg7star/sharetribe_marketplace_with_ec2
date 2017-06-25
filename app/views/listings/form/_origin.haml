@@ -1,5 +1,5 @@
 - required = Maybe(@current_community).listing_location_required.or_else { false }
-- title = t(".location") + (required ? "*" : "")
+- title = t(".location_for_pup") + (required ? "*" : "")
 - required_class = (required ? "required" : "")
 
 = form.label :origin, title, :class => "input"
