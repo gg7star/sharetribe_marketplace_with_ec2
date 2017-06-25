@@ -164,5 +164,9 @@ gem 'redcarpet', '~> 3.4.0'
 
 gem 'intercom'
 
-# Additional gem
+# Additional gem for delayed job_work
 gem 'daemons', '~> 1.2.4'
+
+# Location search
+gem 'acts_as_geocodable'
+gem 'geokit-rails'

@@ -41,7 +41,7 @@ module ListingIndexService::Search
 
     private
 
-    def search_with_sphinx(community_id:, search:, included_models:, includes:)
+    def search_with_sphinx(community_id:, search:, included_models:, includes:, boundingbox: nil, distance_max: nil, lc: nil, lq: nil)
       numeric_search_fields = search[:fields].select { |f| f[:type] == :numeric_range }
       perform_numeric_search = numeric_search_fields.present?
 
@@ -78,25 +78,38 @@ module ListingIndexService::Search
           custom_checkbox_field_options: (grouped_by_operator[:and] || []).flat_map { |v| v[:value] },
         }
 
-        models = Listing.search(
-          Riddle::Query.escape(search[:keywords] || ""),
-          sql: {
-            include: included_models
-          },
-          page: search[:page],
-          per_page: search[:per_page],
-          star: true,
-          with: with,
-          with_all: with_all,
-          order: 'sort_date DESC',
-          max_query_time: 1000 # Timeout and fail after 1s
-        )
+        if search[:keywords] == nil && search[:latitude] != nil && search[:longitude] != nil
+          models = Listing.search
+          models.clear;
+          locations = Location.within(
+            search[:distance_max] || search[:distance_unit] == :km ? 3.10686 : 5,
+            :origin => [search[:latitude], search[:longitude]],
+            :order => 'distance').limit(search[:per_page])
+          locations.each_with_index do |location, index|
+            models.append location.listing
+          end
+        else
+          models = Listing.search(
+            Riddle::Query.escape(search[:keywords] || ""),
+            sql: {
+              include: included_models
+            },
+            page: search[:page],
+            per_page: search[:per_page],
+            star: true,
+            with: with,
+            with_all: with_all,
+            order: 'sort_date DESC',
+            max_query_time: 1000 # Timeout and fail after 1s
+          )
+        end
 
         begin
           DatabaseSearchHelper.success_result(models.total_entries, models, includes)
         rescue ThinkingSphinx::SphinxError => e
           Result::Error.new(e)
         end
+
       end
 
     end

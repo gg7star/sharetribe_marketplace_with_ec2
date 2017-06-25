@@ -202,7 +202,8 @@ Layout/IndentHash:
 Layout/IndentHeredoc:
   Exclude:
     - 'app/services/custom_landing_page/example_data.rb'
-
+    - 'app/services/custom_landing_page/homepage_hero_data.rb'
+    
 # Offense count: 14
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
