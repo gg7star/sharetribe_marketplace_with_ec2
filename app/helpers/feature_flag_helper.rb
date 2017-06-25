@@ -61,13 +61,13 @@ module FeatureFlagHelper
 
   def search_engine
     if APP_CONFIG.external_search_in_use.to_s.casecmp("true").zero?
-      :zappy
-    else
       :sphinx
+    else
+      :zappy
     end
   end
 
   def location_search_available
-    search_engine == :zappy
+    search_engine == :sphinx
   end
 end
