@@ -44,6 +44,9 @@
             %figure.marketplace-cover.fluidratio
               .lander-content.marketplace-lander-content
                 = yield :title_header
+
+                -# = render partial: "hero"
+
         - elsif !(is_homepage && FeatureFlagHelper.feature_enabled?(:topbar_v1))
           .coverimage
             %figure.marketplace-cover-small.fluidratio

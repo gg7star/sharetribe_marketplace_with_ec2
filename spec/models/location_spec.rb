@@ -13,6 +13,7 @@
 #  person_id      :string(255)
 #  location_type  :string(255)
 #  community_id   :integer
+#  delta          :boolean
 #
 # Indexes
 #
