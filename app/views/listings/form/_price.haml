@@ -4,8 +4,6 @@
     = form.label :price, t(".price")
     = form.text_field :price, :class => "price-field", :maxlength => "10", :placeholder => "0", :value => (@listing.price ? @listing.price.to_s: 0), :onchange => "  price = $('#listing_price').val();$('#service_fee_description_for_pup').empty();$('#service_fee_description_for_pup').html(\"Once someone makes a payment, Pupitup's fee will be deducted ($\" + (price * 0.2).toFixed(2) +\")\")"
     = render partial: "listings/form/price_currency", locals: {form: form}
-    %div.small{id: "service_fee_description_for_pup"}
-      = t(".after_service_fee_for_pup")
 
     - if unit_options.empty?
       -# No-op
@@ -52,6 +50,9 @@
           = t(".after_service_fee_you_will_get_paypal_text", :sum_with_currency => '<span id="fee_display"></span>', :paypal_fee_info_link => paypal_fee_info_link).html_safe
         - else
           = t(".after_service_fee_you_will_get", :sum_with_currency => '<span id="fee_display"></span>').html_safe
+
+  %div.small{id: "service_fee_description_for_pup"}
+    = t(".after_service_fee_for_pup")
 
 - if payment_gateway == :paypal
   = render layout: "layouts/lightbox", locals: { id: "paypal_fee_info_content"} do
