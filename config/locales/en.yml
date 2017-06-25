@@ -1397,7 +1397,9 @@ en:
         repeated: "Repeated (add times and days in the field 'detailed description')"
       description:
         detailed_description: "Detailed description"
+        detailed_description_for_pup: "About your pup"
         youtube_info: "If your description contains YouTube links, the videos will be shown below the description."
+        youtube_info_for_pup: "If you include a YouTube URL, it will display as a video on your listing."
       destination:
         destination: Destination
       form_content:
@@ -1415,6 +1417,7 @@ en:
         googlemap_updatemap: "Update Map"
       images:
         image: Image
+        image_for_pup: "Photo(s) of your pup"
         best_result: "For best results, use JPG, GIF or PNG images that are %{width} by %{height} pixels"
         no_file_selected: "No file selected"
         remove_image: "Remove image"
@@ -1434,6 +1437,7 @@ en:
         images_not_uploaded_confirm: "All images have not finished uploading. Do you really want to continue?"
       location:
         location: Location
+        location_for_pup: "Your city, country (example: Seattle, USA)"
       price:
         price: Price
         per: per
@@ -1475,6 +1479,7 @@ en:
         tags: Tags
       title:
         listing_title: "Listing title"
+        listing_title_for_pup: "Your pup's name"
       valid_until:
         valid_until: "Expiration date"
       valid_until_radio_buttons:
