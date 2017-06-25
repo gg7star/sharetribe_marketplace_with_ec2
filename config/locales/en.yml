@@ -1450,6 +1450,7 @@ en:
         shipping_price: "Shipping fee"
         shipping_price_additional: "Additional items"
         pickup: Pickup
+        after_service_fee_for_pup: "Once someone makes a payment, Pupitup's fee will be deducted ($0.00)"
       origin:
         location: Location
         origin: Origin
