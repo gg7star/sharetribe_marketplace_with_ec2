@@ -17,6 +17,8 @@ old_databases.sql
 .bundle
 .sass-cache/
 capybara*
+package.json
+
 public/system/favicons
 public/system/images
 public/system/listing_images
@@ -49,6 +51,8 @@ coverage/
 npm-debug.log*
 node_modules
 client/node_modules
+client/package-lock.json
+client/package.json
 
 # Generated js bundles
 /app/assets/webpack/*
