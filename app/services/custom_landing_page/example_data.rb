@@ -767,22 +767,17 @@ JSON
       "links": [
         {"label": "About", "href": {"type": "path", "id": "about"}},
         {"label": "Contact us", "href": {"type": "path", "id": "contact_us"}},
-        {"label": "How to use?", "href": {"type": "path", "id": "how_to_use"}},
+        {"label": "How to / FAQ", "href": {"type": "path", "id": "how_to_use"}},
         {"label": "Terms", "href": {"type": "path", "id": "terms"}},
-        {"label": "Privary", "href": {"type": "path", "id": "privacy"}},
-        {"label": "Invite new members", "href": {"type": "path", "id": "new_invitation"}},
-        {"label": "Sharetribe", "href": {"value": "https://www.sharetribe.com"}}
+        {"label": "Privacy", "href": {"type": "path", "id": "privacy"}},
+        {"label": "Invite new members", "href": {"type": "path", "id": "new_invitation"}}
       ],
       "social": [
-        {"service": "facebook", "url": "https://www.facebook.com/Sharetribe/"},
-        {"service": "twitter", "url": "https://twitter.com/sharetribe"},
+        {"service": "facebook", "url": "https://www.facebook.com/"},
         {"service": "instagram", "url": "https://www.instagram.com/"},
-        {"service": "youtube", "url": "https://www.youtube.com/channel/UCtefWVq2uu4pHXaIsHlBFnw"},
-        {"service": "googleplus", "url": "https://plus.google.com/114869130265262677354/"},
-        {"service": "linkedin", "url": "https://www.linkedin.com/company/2626583"},
-        {"service": "pinterest", "url": "https://www.pinterest.com/"}
+        {"service": "youtube", "url": "https://www.youtube.com/"}
       ],
-      "copyright": "Copyright Marketplace Ltd 2016"
+      "copyright": "© 2017 Pupitup, LLC"
     }
   ],
 
