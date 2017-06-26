@@ -1143,7 +1143,7 @@ en:
       default_about_text: "This marketplace is powered by Sharetribe platform. With Sharetribe you can easily create your own marketplace website. It's free and only takes a minute. %{click_here_link} to learn more!"
       click_here_link_text: "Click here"
     how_to_use:
-      default_title: "How it works"
+      default_title: "How to / FAQ"
       default_content: "Here you can find information about how %{marketplace_name} works."
   landing_page:
     hero:
@@ -1192,7 +1192,7 @@ en:
       select_language: "Select language"
     infos:
       about: About
-      how_to_use: "How it works"
+      how_to_use: "How to / FAQ"
       info_about_kassi: "Information about %{service_name}"
       news: News
       register_details: Privacy
