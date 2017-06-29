@@ -170,3 +170,4 @@ gem 'daemons', '~> 1.2.4'
 # Location search
 gem 'acts_as_geocodable'
 gem 'geokit-rails'
+gem 'stripe'
